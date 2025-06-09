@@ -3,6 +3,8 @@ import { animated } from 'react-text-animated';
 import type { AnimationType, SplitType } from 'react-text-animated';
 
 import styles from './App.module.css';
+import GitHub from './assets/github';
+import Npm from './assets/Npm';
 
 function App() {
   const [config, setConfig] = useState({
@@ -68,6 +70,33 @@ function App() {
 
   return (
     <div className={styles.App}>
+      {/* Header with links */}
+      <header className={styles.Header}>
+        <div className={styles.HeaderContent}>
+          <h1 className={styles.Title}>react-text-animated</h1>
+          <div className={styles.Links}>
+            <a
+              href="hhttps://github.com/gs18004/react-text-animated"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.LinkButton}
+            >
+              <GitHub />
+              GitHub
+            </a>
+            <a
+              href="https://www.npmjs.com/package/react-text-animated"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.LinkButton}
+            >
+              <Npm />
+              npm
+            </a>
+          </div>
+        </div>
+      </header>
+
       <div className={styles.TabGroup}>
         <h3 className={styles.TabGroupTitle}>Animation Mode</h3>
         <div className={styles.TabButtons}>

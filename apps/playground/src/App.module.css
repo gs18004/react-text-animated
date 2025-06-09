@@ -3,14 +3,72 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 0;
+  padding-bottom: 20px;
 }
+
+/* Header styles */
+.Header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.HeaderContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(45deg, #fff, #e0e6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.Links {
+  display: flex;
+  gap: 15px;
+}
+
+.LinkButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.LinkButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 .Container {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .AnimationDisplay {
@@ -180,6 +238,7 @@
 .TabGroup {
   margin-bottom: 2rem;
   text-align: center;
+  padding: 0 2rem;
 }
 
 .TabGroupTitle {
@@ -239,5 +298,29 @@
     border-color: #646cff;
     background: #646cff;
     color: white;
+  }
+}
+
+/* Header responsive design */
+@media (max-width: 768px) {
+  .HeaderContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Title {
+    font-size: 2rem;
+  }
+
+  .Links {
+    justify-content: center;
+  }
+
+  .Container {
+    padding: 0 1rem;
+  }
+
+  .TabGroup {
+    padding: 0 1rem;
   }
 }
