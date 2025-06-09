@@ -1,6 +1,6 @@
 {
   "name": "react-text-animated",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A React component for text animations with GSAP",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
@@ -28,10 +28,10 @@
   },
   "peerDependencies": {
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0",
-    "gsap": "^3.13.0"
+    "react-dom": ">=16.8.0"
   },
   "dependencies": {
+    "gsap": "^3.13.0",
     "@gsap/react": "2.1.2"
   },
   "devDependencies": {
