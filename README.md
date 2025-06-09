@@ -51,7 +51,7 @@ function App() {
 
 Try out all the animations and customize parameters in our interactive playground:
 
-**[🔗 Live Playground](https://your-playground-url.com)**
+**[🔗 Live Playground](https://react-text-animated.vercel.app)**
 
 The playground allows you to:
 
@@ -227,8 +227,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 🔗 Links
 
-- [Interactive Playground](https://your-playground-url.com)
-- [GitHub Repository](https://github.com/yourusername/react-text-animated)
+- [Interactive Playground](https://react-text-animated.vercel.app)
+- [GitHub Repository](https://github.com/gs18004/react-text-animated)
 - [npm Package](https://www.npmjs.com/package/react-text-animated)
 
 ---
