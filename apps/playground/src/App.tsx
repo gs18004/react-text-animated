@@ -6,6 +6,45 @@ import styles from './App.module.css';
 import GitHub from './assets/GitHub';
 import Npm from './assets/Npm';
 
+const getDefaultValuesForAnimation = (animationType: AnimationType) => {
+  const defaults: Record<AnimationType, { stagger: number; duration: number }> =
+    {
+      fadeIn: { stagger: 0.04, duration: 0.6 },
+      fadeInUp: { stagger: 0.04, duration: 0.6 },
+      fadeInDown: { stagger: 0.04, duration: 0.6 },
+      slideInFromLeft: { stagger: 0.04, duration: 0.6 },
+      slideInFromRight: { stagger: 0.04, duration: 0.6 },
+      blurIn: { stagger: 0.04, duration: 0.6 },
+      revealInUp: { stagger: 0.04, duration: 0.6 },
+      revealInDown: { stagger: 0.04, duration: 0.6 },
+      flipInX: { stagger: 0.04, duration: 0.6 },
+      flipInY: { stagger: 0.04, duration: 0.6 },
+      skewIn: { stagger: 0.04, duration: 0.6 },
+      typewriter: { stagger: 0.1, duration: 0.01 },
+      scaleIn: { stagger: 0.04, duration: 0.6 },
+      scaleInRotate: { stagger: 0.04, duration: 0.6 },
+      bounceIn: { stagger: 0.04, duration: 0.8 },
+      elastic: { stagger: 0.04, duration: 1.2 },
+      zoomIn: { stagger: 0.04, duration: 0.6 },
+      zoomOut: { stagger: 0.04, duration: 0.6 },
+      rotateIn: { stagger: 0.04, duration: 0.6 },
+      rotateInDownLeft: { stagger: 0.04, duration: 0.6 },
+      rotateInDownRight: { stagger: 0.04, duration: 0.6 },
+      rollIn: { stagger: 0.04, duration: 0.6 },
+      lightSpeedIn: { stagger: 0.04, duration: 0.4 },
+      flipInLeft: { stagger: 0.04, duration: 0.6 },
+      flipInRight: { stagger: 0.04, duration: 0.6 },
+      slideInUp: { stagger: 0.04, duration: 0.6 },
+      slideInDown: { stagger: 0.04, duration: 0.6 },
+      morphIn: { stagger: 0.04, duration: 0.8 },
+      glitchIn: { stagger: 0.02, duration: 0.6 },
+      waveIn: { stagger: 0.1, duration: 0.6 },
+      spiralIn: { stagger: 0.04, duration: 1.0 },
+    };
+
+  return defaults[animationType] || { stagger: 0.04, duration: 0.6 };
+};
+
 function App() {
   const [config, setConfig] = useState({
     text: 'react text animated',
@@ -70,7 +109,6 @@ function App() {
 
   return (
     <div className={styles.App}>
-      {/* Header with links */}
       <header className={styles.Header}>
         <div className={styles.HeaderContent}>
           <h1 className={styles.Title}>react-text-animated</h1>
@@ -162,12 +200,16 @@ function App() {
               id="animationType"
               className={styles.Select}
               value={config.animationType}
-              onChange={(e) =>
+              onChange={(e) => {
+                const newAnimationType = e.target.value as AnimationType;
+                const defaults = getDefaultValuesForAnimation(newAnimationType);
                 setConfig((prev) => ({
                   ...prev,
-                  animationType: e.target.value as AnimationType,
-                }))
-              }
+                  animationType: newAnimationType,
+                  stagger: defaults.stagger,
+                  duration: defaults.duration,
+                }));
+              }}
             >
               {animationTypes.map((type) => (
                 <option key={type} value={type}>
