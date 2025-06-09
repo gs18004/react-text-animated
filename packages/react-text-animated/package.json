@@ -23,7 +23,8 @@
   "sideEffects": false,
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly --declaration --outDir dist",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "pnpm build",
+    "prepack": "cp ../../README.md ./"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
