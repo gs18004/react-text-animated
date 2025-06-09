@@ -23,8 +23,5 @@
     "typescript": "^5.8.3",
     "vite": "^6.3.5"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "packageManager": "pnpm@10.8.0"
 }
