@@ -43,5 +43,10 @@
   },
   "author": "Your Name",
   "license": "MIT",
-  "packageManager": "pnpm@10.8.0"
+  "packageManager": "pnpm@10.8.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gs18004/react-text-animated.git",
+    "directory": "packages/react-text-animated"
+  }
 }
