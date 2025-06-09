@@ -1,0 +1,27 @@
+{
+  "name": "root",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "build": "pnpm -r build",
+    "build:library": "pnpm --filter react-text-animated run build",
+    "dev:playground": "pnpm --filter playground run dev"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.29.4",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^22.15.30",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "packageManager": "pnpm@10.8.0"
+}

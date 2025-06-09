@@ -1,0 +1,243 @@
+.App {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.AnimationDisplay {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  border: 2px dashed #646cff;
+  border-radius: 8px;
+  padding: 2rem;
+  background: rgba(100, 108, 255, 0.05);
+}
+
+.AnimatedTitle {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0;
+  text-align: center;
+}
+
+.Controls {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ControlsTitle {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #646cff;
+  text-align: center;
+}
+
+.ControlGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.Label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+
+.Input,
+.Select {
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.Input:focus,
+.Select:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+}
+
+.RangeInput {
+  background: transparent;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  border: none;
+}
+
+.RangeInput::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #646cff;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.RangeInput::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #646cff;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ApplyButton {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #646cff, #535bf2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.ApplyButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(100, 108, 255, 0.3);
+}
+
+.ApplyButton:active {
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .Container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .AnimationDisplay {
+    flex: 2;
+    min-height: 400px;
+  }
+
+  .Controls {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .Controls {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .Label {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .Input,
+  .Select {
+    background: rgba(0, 0, 0, 0.05);
+    color: #213547;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .RangeInput {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .AnimationDisplay {
+    background: rgba(100, 108, 255, 0.1);
+    border-color: #646cff;
+  }
+}
+/* App.module.css에 추가 */
+.TabGroup {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.TabGroupTitle {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #646cff;
+}
+
+.TabButtons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.TabButton {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.TabButton:hover {
+  border-color: #646cff;
+  background: rgba(100, 108, 255, 0.2);
+}
+
+.TabButtonActive {
+  border-color: #646cff;
+  background: #646cff;
+  color: white;
+}
+
+@media (prefers-color-scheme: light) {
+  .TabGroupTitle {
+    color: #646cff;
+  }
+
+  .TabButton {
+    background: rgba(0, 0, 0, 0.05);
+    color: #213547;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .TabButton:hover {
+    background: rgba(100, 108, 255, 0.1);
+    border-color: #646cff;
+  }
+
+  .TabButtonActive {
+    border-color: #646cff;
+    background: #646cff;
+    color: white;
+  }
+}
