@@ -3,7 +3,7 @@ import { animated } from 'react-text-animated';
 import type { AnimationType, SplitType } from 'react-text-animated';
 
 import styles from './App.module.css';
-import GitHub from './assets/github';
+import GitHub from './assets/GitHub';
 import Npm from './assets/Npm';
 
 function App() {
