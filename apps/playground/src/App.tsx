@@ -76,7 +76,7 @@ function App() {
           <h1 className={styles.Title}>react-text-animated</h1>
           <div className={styles.Links}>
             <a
-              href="hhttps://github.com/gs18004/react-text-animated"
+              href="https://github.com/gs18004/react-text-animated"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.LinkButton}
