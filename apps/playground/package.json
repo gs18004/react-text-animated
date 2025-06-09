@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "vercel-build": "pnpm install --frozen-lockfile && pnpm build:library && pnpm build",
+    "vercel-build": "pnpm install --frozen-lockfile && pnpm --filter react-text-animated build&& pnpm build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
