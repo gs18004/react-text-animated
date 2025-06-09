@@ -1,21 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "apps/playground/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/apps/playground/dist/index.html"
-    }
-  ]
+  "buildCommand": "pnpm --filter react-text-animated build && pnpm --filter playground build",
+  "outputDirectory": "apps/playground/dist",
+  "installCommand": "pnpm install --frozen-lockfile"
 }
