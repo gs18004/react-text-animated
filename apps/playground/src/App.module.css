@@ -292,6 +292,7 @@
   .TabButton:hover {
     background: rgba(100, 108, 255, 0.1);
     border-color: #646cff;
+    color: #213547;
   }
 
   .TabButtonActive {
@@ -322,5 +323,17 @@
 
   .TabGroup {
     padding: 0 1rem;
+  }
+
+  .ApplyButton {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .ControlGroup {
+    margin-bottom: 3rem;
   }
 }
